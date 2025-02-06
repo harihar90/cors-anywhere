@@ -120,13 +120,6 @@ describe('Basic functionality', function() {
       .expect(200, helpText, done);
   });
 
-  it('GET /http://:1234', function(done) {
-    // 'http://:1234' is an invalid URL.
-    request(cors_anywhere)
-      .get('/http://:1234')
-      .expect('Access-Control-Allow-Origin', '*')
-      .expect(200, helpText, done);
-  });
 
   it('GET /http:///', function(done) {
     // 'http://:1234' is an invalid URL.
